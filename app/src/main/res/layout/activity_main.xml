@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--<ImageView-->
+    <!--android:id="@+id/v_img"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+    <com.example.jyj.myapplication.SignatureView
+        android:id="@+id/signView"
+        android:paddingHorizontal="-40dp"
+        android:layout_width="match_parent"
+        android:background="#cef9f8"
+        android:layout_height="250dp" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:text="生成图片" />
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:text="清除屏幕" />
+
+            <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
